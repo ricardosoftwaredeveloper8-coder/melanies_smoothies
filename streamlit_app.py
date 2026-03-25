@@ -2,6 +2,8 @@
 import streamlit as st
 #from snowflake.snowpark.context import get_active_session
 from snowflake.snowpark.functions import col
+import requests
+
 
 
 # Write directly to the app.
@@ -56,9 +58,8 @@ if ingredients_list:
 
 # ------------------------------------------------------------- desde aqui se realizan  nuevos cambios ------------------------------------------------------------------
 
-import requests
 smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")  
-st.text(smoothiefroot_response.json())
+#st.text(smoothiefroot_response.json())
     #st.write(smoothiefroot_response.json())
     #time_to_insert = st.button('Submit Order')
     #if time_to_insert:
